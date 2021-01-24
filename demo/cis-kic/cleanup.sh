@@ -7,6 +7,8 @@ GCP_PROJECT=$(gcloud config get-value project)
 dir=${PWD}
 # destroy
 #. demo.sh delete
+# app pods
+kubectl delete -f app/cafe/
 # ingress definition
 kubectl delete -f kic/cis-kic-ingress.yml
 # ingress deployment

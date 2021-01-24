@@ -51,3 +51,7 @@ fileignoreconfig:
   checksum: c7a73f616015df6c436f04ed207b14dded6f9b2010d2e9eb4586f5eca7cc8c8d
 - filename: demo/cis/setup.sh
   checksum: b5ed660b537a50a6d89b53148c296a2e8a50a7a88ab3fc55b5c8152b71f1f522
+- filename: demo/cis-kic/app/cafe/cafe-secret.yaml
+  checksum: b51f63610f927b6fb75a99569d043674d930224b590681a9ef5323416172dfd0
+- filename: demo/cis-kic/app/cafe/cafe-ingress.yaml
+  checksum: 667ac71f396d011f250104d655755f89288285ab384bdf209a54eb9defd1a6a0

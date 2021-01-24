@@ -116,7 +116,7 @@ Outline how the user can use your project and the various features the project o
 | controllerBucket | name of controller installer bucket | `string` | `"none"` | no |
 | controllerLicense | license for controller | `string` | `"none"` | no |
 | controllerPassword | pass of controller admin account | `string` | `"admin123!"` | no |
-| controllerVersion | (optional) Version of controller to install | `string` | `"3.9.0"` | no |
+| controllerVersion | (optional) Version of controller to install | `string` | `"3.12.0"` | no |
 | costcenter | tag for resources | `string` | `"f5costcenter"` | no |
 | customUserData | body of custom bigip userdata | `string` | `""` | no |
 | dbPass | pass of controller admin account | `string` | `"naaspassword"` | no |
@@ -131,7 +131,7 @@ Outline how the user can use your project and the various features the project o
 | gcpProjectId | gcp project id | `any` | n/a | yes |
 | gcpRegion | region where gke is deployed | `any` | n/a | yes |
 | gcpZone | zone where gke is deployed | `any` | n/a | yes |
-| gkeVersion | GKE release version | `string` | `"1.16.15-gke.1600"` | no |
+| gkeVersion | GKE release version | `string` | `"1.18.14-gke.1200"` | no |
 | group | tag for resources | `string` | `"f5group"` | no |
 | intSubnet | internal vpc subnet range name | `string` | `"int-sub-example"` | no |
 | intVpc | internal vpc network | `string` | `"terraform-network-int-example"` | no |
@@ -159,8 +159,10 @@ Outline how the user can use your project and the various features the project o
 |------|-------------|
 | f5vm01\_mgmt\_pip | Outputs bigip output "f5vm01\_ext\_selfip" { value = google\_compute\_instance.f5vm01.network\_interface.0.network\_ip } output "f5vm01\_ext\_selfip\_pip" { value = google\_compute\_instance.f5vm01.network\_interface.0.access\_config.0.nat\_ip } output "f5vm01\_mgmt\_ip" { value = google\_compute\_instance.f5vm01.network\_interface.1.network\_ip } |
 | f5vm01\_mgmt\_pip\_url | n/a |
+| f5vm01\_vip\_url | n/a |
 | f5vm02\_mgmt\_pip | output "f5vm01\_mgmt\_name" { value = google\_compute\_instance.f5vm01.name } output "f5vm02\_ext\_selfip" { value = google\_compute\_instance.f5vm02.network\_interface.0.network\_ip } output "f5vm02\_ext\_selfip\_pip" { value = google\_compute\_instance.f5vm02.network\_interface.0.access\_config.0.nat\_ip } output "f5vm02\_mgmt\_ip" { value = google\_compute\_instance.f5vm02.network\_interface.1.network\_ip } |
 | f5vm02\_mgmt\_pip\_url | n/a |
+| f5vm02\_vip\_url | n/a |
 | public\_vip | output "f5vm02\_mgmt\_name" { value = google\_compute\_instance.f5vm02.name } |
 | public\_vip\_url | n/a |
 

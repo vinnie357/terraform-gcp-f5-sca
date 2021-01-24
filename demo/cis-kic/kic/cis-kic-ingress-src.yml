@@ -11,6 +11,7 @@ metadata:
     ingress.kubernetes.io/ssl-redirect: "true"
     ingress.kubernetes.io/allow-http: "false"
     virtual-server.f5.com/balance: "round-robin"
+    virtual-server.f5.com/serverssl: "/Common/serverssl"
     virtual-server.f5.com/ip: "-external-virtual-address-"
     virtual-server.f5.com/partition: "gke-cluster"
     virtual-server.f5.com/http-port: "443"
@@ -30,4 +31,4 @@ spec:
     - secretName: /Common/clientssl
   backend:
     serviceName: nginx-ingress
-    servicePort: 80
+    servicePort: 443

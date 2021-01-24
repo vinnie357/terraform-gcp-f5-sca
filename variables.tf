@@ -27,7 +27,7 @@ variable gcpProjectId {
 #gcloud container get-server-config --region us-east1
 variable gkeVersion {
   description = "GKE release version"
-  default     = "1.16.15-gke.1600"
+  default     = "1.18.14-gke.1200"
 }
 
 variable podCidr {
@@ -48,7 +48,7 @@ variable nginxCert {
 variable controllerVersion {
   type        = string
   description = "(optional) Version of controller to install"
-  default     = "3.9.0"
+  default     = "3.12.0"
 }
 variable controllerLicense {
   description = "license for controller"

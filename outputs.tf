@@ -14,6 +14,8 @@ output "f5vm02_mgmt_pip_url" { value = "https://${google_compute_instance.f5vm02
 #output "f5vm02_mgmt_name" { value = google_compute_instance.f5vm02.name }
 output "public_vip" { value = google_compute_forwarding_rule.vip1.ip_address }
 output "public_vip_url" { value = "https://${google_compute_forwarding_rule.vip1.ip_address}" }
+output "f5vm01_vip_url" { value = "https://${google_compute_instance.f5vm01.network_interface.0.access_config.0.nat_ip}" }
+output "f5vm02_vip_url" { value = "https://${google_compute_instance.f5vm02.network_interface.0.access_config.0.nat_ip}" }
 # # nginx
 # output "nginx_pip" { value = google_compute_instance.f5vm01.network_interface.0.network_ip }
 # # controller

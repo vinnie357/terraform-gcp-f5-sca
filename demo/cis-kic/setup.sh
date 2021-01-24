@@ -89,6 +89,8 @@ kubectl apply -f kic/nginx-plus-ingress-rbac.yaml
 kubectl apply -f kic/default-server-secret.yaml
 # custom nginx configmap
 kubectl apply -f kic/nginx-config.yaml
+# ingress class
+kubectl apply -f kic/nginx-ingress-class.yml
 # ingress deployment
 kubectl apply -f kic/nginx-plus-ingress.yaml
 
@@ -101,6 +103,8 @@ cp kic/cis-kic-ingress-src.yml kic/cis-kic-ingress.yml
 sed -i "s/-external-virtual-address-/$bigip1ExternalSelfIp/g" kic/cis-kic-ingress.yml
 
 kubectl apply -f kic/cis-kic-ingress.yml
+# deploy app
+kubectl apply -f app/cafe/
 # wait for pods
 sleep 30
 # finished
